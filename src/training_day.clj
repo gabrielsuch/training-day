@@ -9,3 +9,9 @@
 
 (defn average [a b]
   (/ (+ a b) 2))
+
+(defn boolean [x]
+  (if x true false))
+
+(defn teen? [age]
+  (and (> age 12) (< age 20)))
