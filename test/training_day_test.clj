@@ -4,7 +4,7 @@
 
 (facts "boolean"
   (boolean "foo") => true
-  (boolean nil) ;=> false
+  (boolean nil) => false
   (boolean (+ 2 3)) => true
   (boolean true) => true
   (boolean false) => false)
