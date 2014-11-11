@@ -28,3 +28,10 @@
     (divides? 5 n) "buzz"
     (divides? 3 n) "fizz"
       :else ""))
+
+(defn generic-doublificate [n]
+  (cond
+    (number? n) (* n 2)
+    (empty? n) nil
+    (or (list? n) (vector? n)) (* (count n) 2)
+      :else true))

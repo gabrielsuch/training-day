@@ -32,3 +32,11 @@
   (fizzbuzz 45) => "gotcha!"
   (fizzbuzz 48) => "fizz"
   (fizzbuzz 70) => "buzz")
+
+(facts "generic-doublificate"
+  (generic-doublificate 1)        => 2
+  (generic-doublificate [1 2])    => 4
+  (generic-doublificate '(65 21)) => 4
+  (generic-doublificate {})       => nil
+  (generic-doublificate [])       => nil
+  (generic-doublificate {:a 1})   => true)
