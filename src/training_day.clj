@@ -24,7 +24,7 @@
 
 (defn fizzbuzz [n]
   (cond
-   (= (mod n 15) 0) "gotcha!"
-   (= (mod n 5) 0) "buzz"
-   (= (mod n 3) 0) "fizz"
-   :else ""))
+    (divides? 15 n) "gotcha!"
+    (divides? 5 n) "buzz"
+    (divides? 3 n) "fizz"
+      :else ""))
