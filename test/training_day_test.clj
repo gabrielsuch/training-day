@@ -40,3 +40,18 @@
   (generic-doublificate {})       => nil
   (generic-doublificate [])       => nil
   (generic-doublificate {:a 1})   => true)
+
+(facts "not-teen?"
+  (not-teen? 13) => false
+  (not-teen? 25) => true
+  (not-teen? 12) => true
+  (not-teen? 19) => false
+  (not-teen? 20) => true)
+
+(facts "leap-year?"
+  (leap-year? 100) => false
+  (leap-year? 200) => false
+  (leap-year? 400) => true
+  (leap-year? 12)  => true
+  (leap-year? 20)  => true
+  (leap-year? 15)  => false)

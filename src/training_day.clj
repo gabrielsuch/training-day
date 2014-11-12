@@ -35,3 +35,12 @@
     (empty? n) nil
     (or (list? n) (vector? n)) (* (count n) 2)
       :else true))
+
+(defn not-teen? [age]
+  (not (teen? age)))
+
+(defn leap-year? [y]
+   (or
+      (and (divides? 4 y) (divides? 100 y) (divides? 400 y))
+      (and (divides? 4 y) (not (divides? 100 y)))
+   ))
