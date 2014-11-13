@@ -44,3 +44,23 @@
       (and (divides? 4 y) (divides? 100 y) (divides? 400 y))
       (and (divides? 4 y) (not (divides? 100 y)))
    ))
+
+(defn cutify [a]
+  (conj a "<3"))
+
+(defn rectangle [bottom-left top-right]
+  [bottom-left top-right])
+
+(defn height [r]
+  (let [[[x1 y1] [x2 y2]] r]
+   (- y2 y1)))
+
+(defn width [r]
+  (let [[[x1 y1] [x2 y2]] r]
+    (- x2 x1)))
+
+(defn square? [r]
+  (= (height r) (width r)))
+
+(defn area [r]
+  (* (height r) (width r)))
